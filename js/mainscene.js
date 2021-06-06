@@ -6,7 +6,8 @@ export default class MainScene extends Phaser.Scene {
     init() {}
 
     create() {
-        this.bg1 = this.add.sprite(0, 0, 'bg1').setOrigin(0);
+
+       this.bg1 = this.add.sprite(0, 0, 'bg1').setOrigin(0);
        
     }
 

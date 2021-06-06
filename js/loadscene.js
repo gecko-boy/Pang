@@ -15,7 +15,7 @@ export default class LoadScene extends Phaser.Scene{
 
     }
     create(){
-        
-        
+        this.input.mouse.disableContextMenu();
+        this.scene.start('MainScene');
     }
 }

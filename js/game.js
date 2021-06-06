@@ -2,8 +2,8 @@ import LoadScene from './loadscene.js';
 import MainScene from './mainscene.js'
 
 const config = {
-    width: 825,
-    height: 550,
+    width: 800,
+    height: 600,
     type: Phaser.Auto,
     parent: 'game-canvas',
     backgroundColor: ' #3ccd41',
