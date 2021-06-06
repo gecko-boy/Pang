@@ -3,7 +3,7 @@ import MainScene from './mainscene.js'
 
 const config = {
     width: 800,
-    height: 600,
+    height: 500,
     type: Phaser.Auto,
     parent: 'game-canvas',
     backgroundColor: ' #3ccd41',
