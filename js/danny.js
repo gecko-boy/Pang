@@ -19,7 +19,7 @@ export class Player extends Phaser.Physics.Arcade.Sprite{
     }
 
     update(time) {
-        //sistema de inputs
+        //sistema de inputs MOVIMENTO
         if(this.movementInput.right.isDown) {
             this.setVelocityX(this.hVelocity);
         }
@@ -28,6 +28,12 @@ export class Player extends Phaser.Physics.Arcade.Sprite{
         }
         else {
             this.setVelocityX(0);
+        }
+    }
+
+    keydown(event) {
+        if (event.keyCode == 32) {
+            console.log("disparar arpão");
         }
     }
     

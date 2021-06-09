@@ -14,3 +14,9 @@ header img {
     margin-top: -30px;
     margin-bottom: -30px;
 }
+
+p {
+    color: red;
+    text-align: center;
+    font-family: cursive;
+}
