@@ -14,7 +14,7 @@ export default class Lvl1 extends Phaser.Scene{
     create() {
 
         //criar plataformas
-        this.platform = this.physics.add.staticGroup({
+        this.platforms = this.physics.add.staticGroup({
             allowGravity: false,
             immovable: true
         });
