@@ -1,4 +1,5 @@
 import {Player} from "./danny.js"
+import {Platform} from "./platform.js"
 
 export default class Lvl1 extends Phaser.Scene{
     constructor() {
@@ -26,13 +27,17 @@ export default class Lvl1 extends Phaser.Scene{
            "playerFrame1", 0
        ).setScale(0.4);
 
+
+            //será esta a melhor forma de o fazer??
+    //    this.platform1 = new Platform(
+    //     this,
+    //     0,
+    //     0,
+    //     "plat_grande", 0
+    //     ).setScale(1);
+
 //criar plataformas
-        // this.platforms = this.physics.add.staticGroup({
-        //     allowGravity: false,
-        //     immovable: true
-        // });
-    //    let platform = this.add.tileSprite(1024, 2048 - 1300, 3* 1500, 1000, 'ground', 0).setScale(2);
-    //    this.platforms.add(platform);
+        
 
     }
 
