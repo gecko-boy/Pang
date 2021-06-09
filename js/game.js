@@ -1,18 +1,20 @@
-import LoadScene from './loadscene.js';
-import MainScene from './mainscene.js'
+import {LoadScene} from "./loadscene.js";
+import {Lvl1} from "./level1_hallway.js";
 
+
+//configurar o jogo de jogo
 const config = {
-    width: 800,
-    height: 500,
-    type: Phaser.Auto,
+    width: 1748,
+    height: 2480,
+    type: Phaser.AUTO,
     parent: 'game-canvas',
     backgroundColor: ' #3ccd41',
-    scene: [LoadScene, MainScene],
+    scene: [LoadScene, Lvl1],
     physics : {
         default: 'arcade',
         arcade: {
             gravity: { y: 150 },
-            debug: false
+            debug: true
         }
     }
 }

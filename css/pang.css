@@ -1,9 +1,16 @@
 header {
-    background-color: red;
+    background-color: rgb(184, 115, 83);
     text-align: center;
 }
 
 h1{
     color: white;
     font-size: large;
+}
+
+header img {
+    width: 400px;
+    height: 250px;
+    margin-top: -30px;
+    margin-bottom: -30px;
 }
