@@ -7,17 +7,13 @@ export default class Lvl1 extends Phaser.Scene{
 
     init() {
 
-        //ir buscar inputs ao player
-        this.gameControls = this.Player.movementInput;
+        //inputs
+        this.gameControls = this.input.keyboard.createCursorKeys();
     }
 
     create() {
 
-        //criar plataformas
-        this.platforms = this.physics.add.staticGroup({
-            allowGravity: false,
-            immovable: true
-        });
+        
 
         //cenário
        this.add.image(0, 0, 'bg1').setOrigin(0).setScale(1);
@@ -25,15 +21,22 @@ export default class Lvl1 extends Phaser.Scene{
        //criar player
        this.player = new Player(
            this,
-           this.gameControls.config.width * 0.5,
-           this.gameControls.config.height * 0.5,
+           this.game.config.width / 2,
+           this.game.config.height,
            "playerFrame1", 0
-       ).setScale(1);
+       ).setScale(0.4);
 
-       let platform = this.add.tileSprite(1748, 2480, 1500, 1000);
+//criar plataformas
+        // this.platforms = this.physics.add.staticGroup({
+        //     allowGravity: false,
+        //     immovable: true
+        // });
+    //    let platform = this.add.tileSprite(1024, 2048 - 1300, 3* 1500, 1000, 'ground', 0).setScale(2);
+    //    this.platforms.add(platform);
+
     }
 
     update(time) {
-        this.player.updte(time);
+        this.player.update(time);
     }
 }

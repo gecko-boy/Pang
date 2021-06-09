@@ -1,11 +1,11 @@
-import {LoadScene} from "./loadscene.js";
-import {Lvl1} from "./level1_hallway.js";
+import LoadScene from "./loadscene.js";
+import Lvl1 from "./level1_hallway.js";
 
 
 //configurar o jogo de jogo
 const config = {
-    width: 1748,
-    height: 2480,
+    width: 827,
+    height: 583,
     type: Phaser.AUTO,
     parent: 'game-canvas',
     backgroundColor: ' #3ccd41',
