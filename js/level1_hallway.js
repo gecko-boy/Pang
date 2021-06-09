@@ -13,7 +13,10 @@ export default class Lvl1 extends Phaser.Scene{
     }
 
     create() {
-
+        this.platform = this.physics.add.staticGroup({
+            allowGravity: false,
+            immovable: true
+        })
         
 
         //cenário
@@ -27,7 +30,6 @@ export default class Lvl1 extends Phaser.Scene{
            "playerFrame1", 0
        ).setScale(0.4);
 
-
             //será esta a melhor forma de o fazer??
     //    this.platform1 = new Platform(
     //     this,
@@ -37,8 +39,18 @@ export default class Lvl1 extends Phaser.Scene{
     //     ).setScale(1);
 
 //criar plataformas
-        
+    }
 
+    platformSpawning() {
+        levelData.forEach(data => {
+            let newPlatform = undefined;
+            if (data.repeat == 1) {
+                newPlatform = this.add.sprite(data.x, data.y, data.frame);
+            } else {
+                newPlatform = this.add.tileSprite(data.x, data.y, data.repeat * data.width, data.height, data.key, data.frame);
+            }
+            this.platformSpawning.add(newPlatform);
+        })
     }
 
     update(time) {
