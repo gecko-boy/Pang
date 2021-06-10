@@ -10,7 +10,7 @@ export default class LoadScene extends Phaser.Scene{
         this.load.image('playerFrame1', './images/player.png');
         this.load.image("playerFrame2", "./images/player2.png");
         this.load.image('bola_tran', './images/bolas.png');
-        this.load.image('bola_op', '.images/bolas2.png');
+        this.load.image('bola_op', './images/bolas2.png');
         this.load.image('arp', './images/lança.png');
         this.load.image('plat_grande', './images/plataformas.png');
         this.load.image('plat_pequena', './images/plataformas2.png');
