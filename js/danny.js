@@ -1,9 +1,7 @@
-import Arpoon from "./arpoon.js"
-
 export class Player extends Phaser.Physics.Arcade.Sprite{
-    constructor(scene, x, y, texture, frame, arpoonTexture){
+    constructor(scene, x, y, texture, frame){
         //criar script do player
-        super(scene, x, y, texture, frame, arpoonTexture);
+        super(scene, x, y, texture, frame);
         scene.add.existing(this);
         scene.physics.add.existing(this);
 
@@ -19,15 +17,14 @@ export class Player extends Phaser.Physics.Arcade.Sprite{
 
         this.movementInput = scene.input.keyboard.createCursorKeys();
 
-        this.scene.input.on("pointerdown", e => {this.fire(e)});
-        this.playerIsFiring = false;
+        this.onPlatforms = false;
 
-        this.arpoon = new Arpoon(this.scene, 0, 0, this.arpoonTexture, this);
+    }
+    setOnPlatform(value) {
+        this.onPlatforms = value;
     }
 
-    fire(event) {
-        this.playerIsFiring = true;
-    }
+
 
     move() {
         //sistema de inputs MOVIMENTO
@@ -46,12 +43,6 @@ export class Player extends Phaser.Physics.Arcade.Sprite{
 
     update(time) {
         this.move();
-        if(this.playerIsFiring) {
-            console.log("fire");
-            //criar arpão
-            this.arpoon.createSelf(this);
-            this.playerIsFiring = false;
-        }
     }
 
 }
